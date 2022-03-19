@@ -1,7 +1,8 @@
-- 👋 Hi, I’m @sanskar-mk2
-- 👀 I’m interested in computer graphics
-- 🌱 I’m currently learning frontend and flask
+- 👋 Hi, I’m Sanskar Tiwari
+- 👀 I’m interested in computers, data and graphics
+- 🌱 I’m currently learning react and flask
 - 💞️ I’m looking to collaborate on any of my repos
+- 🔥 I'm motivated and I learn things fast.
 - 📫 How to reach me: sanskar.mk@gmail.com
 
 <!---
