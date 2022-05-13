@@ -1,0 +1,22 @@
+{
+  "name": "sanskar-mk2",
+  "version": "1.0.0",
+  "description": "- 👋 Hi, I’m Sanskar Tiwari\r - 👀 I’m interested in computers, data and graphics\r - 🌱 I’m currently learning react and flask\r - 💞️ I’m looking to collaborate on any of my repos\r - 🔥 I'm motivated and I learn things fast.\r - 📫 How to reach me: sanskar.mk@gmail.com",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanskar-mk2/sanskar-mk2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanskar-mk2/sanskar-mk2/issues"
+  },
+  "homepage": "https://github.com/sanskar-mk2/sanskar-mk2#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}
