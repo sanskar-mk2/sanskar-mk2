@@ -1,6 +1,6 @@
-- 👋 Hi, I’m Sanskar Tiwari
+- 👋 Hi, I’m Sanskar
 - 👀 I’m interested in computers, data and graphics
-- 🌱 I’m currently learning react and flask
+- 🌱 I’m currently learning django and nextjs 
 - 💞️ I’m looking to collaborate on any of my repos
 - 🔥 I'm motivated and I learn things fast.
 - 📫 How to reach me: sanskar.mk@gmail.com
