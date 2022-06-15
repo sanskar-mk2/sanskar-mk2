@@ -468,16 +468,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.left-0 {
-  left: 0px;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .flex {
@@ -532,15 +524,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 1rem;
 }
 
-.align-top {
-  vertical-align: top;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -558,14 +541,6 @@ main {
 }
 
 @media (min-width: 768px) {
-  .md\:mt-4 {
-    margin-top: 1rem;
-  }
-
-  .md\:mb-4 {
-    margin-bottom: 1rem;
-  }
-
   .md\:mt-8 {
     margin-top: 2rem;
   }
