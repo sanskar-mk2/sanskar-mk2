@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+    <title>AlpineJS</title>
+    <style>
+        [x-cloak] {
+            display: none;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"
+            integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+    <script src="//unpkg.com/alpinejs"
+            defer></script>
+    <script src="//cdn.tailwindcss.com"></script>
+    <script
+            src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</head>
+
+<body class="w-screen min-h-screen bg-green-100">
+    <canvas id="myChart"
+            class="w-full"
+            height="400"></canvas>
+    <script>
+        // change these but make sure they are equal lengths
+        const labels = [
+            "Red",
+            "Blue",
+            "Yellow",
+            "Green",
+            "Purple",
+            "Orange",
+        ];
+        const data0 = [12, 19, 3, 5, 2, 3]; //black data
+        const data1 = [11, 11, 11, 11, 11, 11]; //blue data
+
+        // change labels here
+        const black_bar = "Black Bars";
+        const blue_bar = "Colored Values";
+        const yellow_bar = "Difference";
+
+        // tinker below this only if you know what you are doing
+
+        const ctx = document.getElementById("myChart");
+        const myChart = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: black_bar,
+                        data: data0,
+                        barPercentage: 0.5,
+                        backgroundColor: "#bbbbbb",
+                        datalabels: {
+                            color: "#ffffff",
+                            backgroundColor: "#000000",
+                            padding: 4,
+                            anchor: "end",
+                            borderRadius: 4,
+                            align: "end",
+                        },
+                        borderColor: "#000000",
+                        borderWidth: 1,
+                    },
+                    {
+                        label: "Colored Values",
+                        data: data1,
+                        backgroundColor: "#89CFF0",
+                        datalabels: {
+                            color: "#ffffff",
+                            backgroundColor: "#0000ff",
+                            anchor: "end",
+                            padding: 4,
+                            borderRadius: 4,
+                            align: "end",
+                        },
+                        borderColor: "#0000ff",
+                        borderWidth: 1,
+                        barPercentage: 1,
+                    },
+                    {
+                        label: "Difference",
+                        data: data1,
+                        barPercentage: 0.5,
+                        backgroundColor: "#ffff00",
+                        datalabels: {
+                            color: "#000000",
+                            backgroundColor: "#ffff00",
+                            padding: 4,
+                            borderRadius: 4,
+                            formatter: function (value, context) {
+                                return (
+                                    data1[context.dataIndex] -
+                                    data0[context.dataIndex]
+                                );
+                            },
+                            anchor: "end",
+                            align: "start",
+                        },
+
+                        borderColor: "#ffff0000",
+                        borderWidth: 1,
+                    },
+                ],
+            },
+            plugins: [ChartDataLabels],
+            options: {
+                responsive: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
+                    x: {
+                        stacked: true,
+                    },
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>
