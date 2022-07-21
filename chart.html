@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+    <title>AlpineJS</title>
+    <style>
+        [x-cloak] {
+            display: none;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"
+            integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/alpinejs"
+            defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+            src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</head>
+
+<body class="w-screen h-screen flex bg-white">
+    <div class="flex w-full justify-center items-center">
+        <canvas id="myChart"
+                height="500"
+                width="800"></canvas>
+    </div>
+    <script>
+        // chart title options
+        const chart_title_text = "CHART TITLE HERE";
+        const chart_title_color = "#000000";
+        const chart_title_full_size = false; // can be true or false
+        const chart_title_font_size = 24;
+
+        // change these but make sure they are equal lengths
+        const labels = [
+            "11-Jul",
+            "18-Jul",
+            "25-Jul",
+            "01-Aug",
+            "08-Aug",
+            "15-Aug",
+            "22-Aug",
+            "29-Aug",
+            "05-Sep",
+            "12-Sep",
+            "19-Sep",
+            "26-Sep",
+            "03-Oct",
+            "10-Oct",
+        ];
+        const data0 = [
+            3831,
+            2730,
+            3651,
+            5120,
+            5010,
+            5540,
+            4325,
+            5237,
+            420,
+            1196,
+            1713,
+            303,
+            null,
+            445,
+        ]; //black data
+        const data1 = [
+            2300, 5750, 5750, 5750, 5750, 5750, 5750, 5750, 4600, 5750,
+            5750, 5750, 5750, 5750,
+        ]; //blue data
+
+        // change labels here
+        const black_bar = "Req Assm Hours";
+        const blue_bar = "Total Assm Hours";
+        const yellow_bar = "Hours Available";
+
+        // tinker below this only if you know what you are doing
+
+        const ctx = document.getElementById("myChart");
+        const myChart = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: black_bar,
+                        data: data0,
+                        barPercentage: 0.75,
+                        backgroundColor: "#bbbbbb", //bar color
+                        datalabels: {
+                            color: "#ffffff", //font color
+                            backgroundColor: "#808080", //font box
+                            padding: 3,
+                            anchor: "end",
+                            borderRadius: 4,
+                            align: "end",
+                        },
+                        borderColor: "#000000",
+                        borderWidth: 0,
+                    },
+                    {
+                        label: blue_bar,
+                        data: data1,
+                        backgroundColor: "#ffffff",
+                        datalabels: {
+                            color: "#ffffff",
+                            backgroundColor: "#6495ED",
+                            anchor: "end",
+                            padding: 4,
+                            borderRadius: 4,
+                            align: "end",
+                        },
+                        borderColor: "#6495ED",
+                        borderWidth: 2,
+                        barPercentage: 1,
+                        borderRadius: 4,
+                    },
+                    {
+                        label: yellow_bar,
+                        data: data1,
+                        barPercentage: 0.5,
+                        backgroundColor: "#9FE2BF",
+                        datalabels: {
+                            color: "#000000",
+                            backgroundColor: "#9FE2BF",
+                            padding: 4,
+                            borderRadius: 4,
+                            formatter: function (value, context) {
+                                return (
+                                    data1[context.dataIndex] -
+                                    data0[context.dataIndex]
+                                );
+                            },
+                            anchor: "end",
+                            align: "start",
+                        },
+
+                        borderColor: "#ffff0000",
+                        borderWidth: 1,
+                        borderRadius: 5,
+                    },
+                ],
+            },
+            plugins: [ChartDataLabels],
+            options: {
+                plugins: {
+                    legend: {
+                        position: "right",
+                        align: "middle",
+                        labels: {
+                            padding: 30,
+                        },
+                    },
+                    title: {
+                        display: true,
+                        text: chart_title_text,
+                        color: chart_title_color,
+                        fullSize: chart_title_full_size,
+                        font: {
+                            size: chart_title_font_size,
+                        },
+                        padding: {
+                            bottom: 30,
+                        },
+                    },
+                },
+                responsive: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
+                    x: {
+                        stacked: true,
+                    },
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>
