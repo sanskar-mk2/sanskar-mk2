@@ -5,9 +5,9 @@
 - 🔥 My USP is that I learn hard things fast
 - 📫 How to reach me: sanskar.mk2@gmail.com
 
-<!-- [![Sanskar's GitHub stats](https://github-readme-stats.vercel.app/api?username=sanskar-mk2&count_private=true&include_all_commits=true&theme=dracula&show_icons=true&custom_title=Sanskar's%20GitHub%20Stats)](https://github.com/sanskar-mk2/)
+[![Sanskar's GitHub stats](https://github-readme-stats.vercel.app/api?username=sanskar-mk2&count_private=true&include_all_commits=true&theme=dracula&show_icons=true&custom_title=Sanskar's%20GitHub%20Stats)](https://github.com/sanskar-mk2/)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sanskar-mk2&count_private=true&include_all_commits=true&theme=dracula)](https://github.com/sanskar-mk2/) -->
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sanskar-mk2&count_private=true&include_all_commits=true&theme=dracula)](https://github.com/sanskar-mk2/)
 
 
 <!---
