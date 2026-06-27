@@ -1,4 +1,2 @@
 - 👋 Hi, I’m Sanskar
 - 👀 I’m interested in computers, data and graphics
-- 🔨 Currently working on AI RPG simulator.
-- 📫 How to reach me: sanskar.mk2@gmail.com
